@@ -1,5 +1,5 @@
 import { Heart } from "lucide-react";
-import heroImage from "../../assets/images/5.jpg";
+import heroImage from "../../assets/images/background.jpg";
 
 interface OverlayProps {
   onEnter: () => void;
