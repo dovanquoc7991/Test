@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@layer utilities {
+  .animate-fall {
+    animation: fall 10s linear infinite;
+  }
+  @keyframes fall {
+    0% { transform: translateY(-10vh) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+  }
+  .animate-sway-fall {
+    animation: sway-fall 12s linear infinite;
+  }
+  @keyframes sway-fall {
+    0% { transform: translateY(-10vh) translateX(0) rotate(0deg); }
+    50% { transform: translateY(50vh) translateX(40px) rotate(180deg); }
+    100% { transform: translateY(110vh) translateX(-40px) rotate(360deg); }
+  }
+}
