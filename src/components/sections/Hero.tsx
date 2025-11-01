@@ -29,7 +29,16 @@ const Hero = ({ names }: HeroProps) => {
           </span>
         </div>
 
-        <p className="text-xl mb-8">13.12.2025</p>
+        <div className="flex justify-center gap-8 md:gap-12 text-lg mb-8 font-sans">
+          <div className="text-center">
+            <p className="font-semibold tracking-wider">NHÀ GÁI</p>
+            <p className="text-xl font-bold">12.12.2025</p>
+          </div>
+          <div className="text-center">
+            <p className="font-semibold tracking-wider">NHÀ TRAI</p>
+            <p className="text-xl font-bold">13.12.2025</p>
+          </div>
+        </div>
         <WeddingCountdown />
       </div>
     </section>
