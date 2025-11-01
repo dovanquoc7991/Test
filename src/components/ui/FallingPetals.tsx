@@ -1,7 +1,7 @@
 import { Flower } from 'lucide-react';
 
 const FallingPetals = () => {
-  const petalCount = 4; // Số lượng cánh hoa
+  const petalCount = 5; // Tăng số lượng cánh hoa
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-[97]">

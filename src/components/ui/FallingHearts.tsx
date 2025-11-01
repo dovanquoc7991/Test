@@ -1,7 +1,7 @@
 import { Heart } from 'lucide-react';
 
 const FallingHearts = () => {
-  const heartCount = 4; // Số lượng trái tim
+  const heartCount = 5; // Tăng số lượng trái tim
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-[99]">

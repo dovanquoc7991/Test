@@ -15,12 +15,13 @@ import FallingPetals from "./components/ui/FallingPetals";
 import Overlay from "./components/ui/Overlay";
 import music1 from "./assets/music/1.mp3";
 import music2 from "./assets/music/2.mp3";
+// import seamlessBg from "./assets/images/seamless-bg.png"; // Import ảnh nền
 
 function App() {
   // Trong thực tế, bạn nên tạo một file config riêng để lưu các thông tin này
   const brideAndGroom = {
-    groom: "Văn Cường",
-    bride: "Diễm My",
+    groom: "Văn\u00A0Cường",
+    bride: "Diễm\u00A0My",
   };
 
   const [showOverlay, setShowOverlay] = useState(true);
@@ -36,7 +37,10 @@ function App() {
   };
 
   return (
-    <div className="font-sans bg-gray-50 text-gray-700">
+    <div
+      className="font-sans text-gray-700"
+      // style={{ backgroundImage: `url(${seamlessBg})` }}
+    >
       <FallingHearts />
       <FallingPetals />
       <FireworksEffect />
@@ -48,8 +52,8 @@ function App() {
         <Story />
         <Events />
         <Gallery />
-        <Gift />
         <Wishes />
+        <Gift />
       </main>
       <Footer />
       <MusicPlayer

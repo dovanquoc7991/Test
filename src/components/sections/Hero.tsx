@@ -16,9 +16,19 @@ const Hero = ({ names }: HeroProps) => {
     >
       <div className="bg-white/30 backdrop-blur-sm p-8 rounded-lg shadow-xl text-gray-800">
         <h2 className="text-2xl font-serif mb-4">Trân trọng báo hỷ</h2>
-        <h1 className="text-5xl md:text-7xl font-serif mb-2 font-bold">
-          {names.bride} &amp; {names.groom}
-        </h1>
+
+        <div className="flex flex-wrap justify-center items-center gap-2 mb-2">
+          <span className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold">
+            {names.groom}
+          </span>
+          <span className="text-3xl sm:text-4xl md:text-6xl font-serif text-pink-600 font-bold">
+            &
+          </span>
+          <span className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold">
+            {names.bride}
+          </span>
+        </div>
+
         <p className="text-xl mb-8">13.12.2025</p>
         <WeddingCountdown />
       </div>
