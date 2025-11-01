@@ -96,7 +96,7 @@ const Wishes = () => {
       </div>
 
       <div className="container mx-auto max-w-4xl text-center relative z-10">
-        <h2 className="text-4xl font-serif text-gray-800 mb-4">Gửi Lời Chúc</h2>
+        <h2 className="text-4xl text-gray-800 mb-4">Gửi Lời Chúc</h2>
         <p className="text-gray-600 mb-8">
           Cảm ơn bạn đã đến chung vui. Hãy để lại vài dòng kỷ niệm nhé!
         </p>
@@ -138,7 +138,7 @@ const Wishes = () => {
                 <X size={22} />
               </button>
 
-              <h3 className="text-2xl font-serif text-center text-pink-500 mb-6">
+              <h3 className="text-2xl text-center text-pink-500 mb-6">
                 {editingWish ? "Chỉnh sửa lời chúc 💬" : "Gửi lời chúc yêu thương 💞"}
               </h3>
 
@@ -264,4 +264,3 @@ const Wishes = () => {
 };
 
 export default Wishes;
-
