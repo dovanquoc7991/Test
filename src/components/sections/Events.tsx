@@ -3,7 +3,7 @@ import { MapPin, X, Clock, Calendar, Heart, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Events = () => {
-  const brideCeremonyMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.583561800568!2d109.12295047555774!3d14.277491586171472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3168cb09206e1813%3A0x9bcbb128f3ee594d!2zTmjDoCBWxINuIEjDs2EgVGjDtG4gTeG7uSBQaMO6IE5hbQ!5e0!3m2!1svi!2s!4v1761929067263!5m2!1svi!2s";
+  const brideCeremonyMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15513.293854873184!2d109.18256625177891!3d13.577039021840289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f74c5495312c5%3A0xd3b27bedd3749acb!2sQu%C3%A1n%20Trung%20Trinh!5e0!3m2!1svi!2s!4v1764006211204!5m2!1svi!2s";
   const groomCeremonyMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124298.32919189973!2d109.13911436956008!3d13.205039877951199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f9547a2e62f4b%3A0x86927cbbf8f9045c!2zTmjDoCBow6BuZyBUaeG7h2MgY8aw4bubaSBIb8OgaSBEdXnDqm4gMg!5e0!3m2!1svi!2s!4v1761933697294!5m2!1svi!2s";
   const weddingPartyMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8121914611256!2d106.73124677440467!3d10.825680089326049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527881e378ad7%3A0xe56516934de312b0!2sWhite%20Garden%20GH!5e0!3m2!1svi!2s!4v1764003767403!5m2!1svi!2s";
 
@@ -18,7 +18,7 @@ const Events = () => {
       time: "08:00",
       date: "10.12.2025",
       location: "Tư gia nhà gái",
-      address: "Thôn Mỹ Phú Bác, Xã Bình Dương, Tỉnh Phú Yên",
+      address: "Dân Phố Trung Trinh, P.Sông Cầu, T. Đắk LắK",
       mapUrl: brideCeremonyMapUrl,
       color: "from-pink-500 to-rose-500",
       bgColor: "bg-pink-50",
