@@ -13,12 +13,11 @@ interface HeroProps {
 const Hero = ({ names }: HeroProps) => {
   return (
     <section
-      className="relative min-h-screen bg-cover bg-center bg-fixed flex flex-col justify-center items-center text-center overflow-hidden"
+      className="relative min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-center overflow-hidden"
       style={{ 
         backgroundImage: `url(${heroImage})`,
-        // Thêm fallback background color và đảm bảo hiển thị trên iOS
+        // Remove bg-fixed và thêm fallback
         backgroundColor: '#000',
-        backgroundAttachment: 'scroll' // Thay thế fixed cho iOS
       }}
     >
       {/* Lớp phủ gradient hiện đại - làm tối hơn để chữ nổi bật */}
@@ -215,17 +214,10 @@ const Hero = ({ names }: HeroProps) => {
         </motion.div>
       </motion.div>
 
-      {/* CSS fixes cho iOS */}
+      {/* Thêm Google Fonts */}
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
-          
-          /* Fix cho background image trên iOS */
-          @supports (-webkit-touch-callout: none) {
-            .bg-fixed {
-              background-attachment: scroll;
-            }
-          }
         `}
       </style>
     </section>
