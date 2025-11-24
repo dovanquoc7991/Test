@@ -15,6 +15,10 @@ import image9 from "../../assets/images/9.jpg";
 import image10 from "../../assets/images/10.jpg";
 import image11 from "../../assets/images/11.jpg";
 import image12 from "../../assets/images/12.jpg";
+import image13 from "../../assets/images/13.jpg";
+import image14 from "../../assets/images/14.jpg";
+import image15 from "../../assets/images/15.jpg";
+import image16 from "../../assets/images/16.jpg";
 
 // Khai báo mảng ảnh với các ảnh đã import
 const photos = [
@@ -30,19 +34,23 @@ const photos = [
     { src: image10, width: 800, height: 1200 },
     { src: image11, width: 1600, height: 900 },
     { src: image12, width: 800, height: 1200 },
+    { src: image13, width: 800, height: 1200 },
+    { src: image14, width: 800, height: 1200 },
+    { src: image15, width: 800, height: 1200 },
+    { src: image16, width: 800, height: 1200 },
 ];
 
 const Gallery = () => {
     const [index, setIndex] = useState(-1);
 
     return (
-        <section className="py-20 px-4 bg-white">
+        <section id="gallery" className="py-20 px-4 bg-white">
             <div className="container mx-auto text-center">
                 <h2 className="text-4xl font-serif text-gray-800 mb-4">Album Ảnh</h2>
                 <p className="text-gray-600 mb-12">Lưu giữ những khoảnh khắc quý giá trong hành trình của chúng mình</p>
                 
                 {/* Lưới ảnh thumbnail đơn giản */}
-                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     {photos.map((photo, idx) => (
                         <div key={idx} className="aspect-square cursor-pointer" onClick={() => setIndex(idx)}>
                             <img src={photo.src} alt="" className="w-full h-full object-cover rounded-md hover:scale-105 transition-transform" />

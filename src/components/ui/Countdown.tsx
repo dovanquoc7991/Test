@@ -4,7 +4,7 @@ import Countdown from "react-countdown";
 const CountdownComponent = Countdown as any;
 
 // Ngày cưới của bạn (Năm, Tháng - 1, Ngày)
-const weddingDate = new Date(2025, 11, 13);
+const weddingDate = new Date(2025, 11, 27);
 
 const CountdownRenderer = ({ days, hours, minutes, seconds }: { days: number, hours: number, minutes: number, seconds: number }) => {
   return (
