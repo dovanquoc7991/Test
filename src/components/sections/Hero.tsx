@@ -13,8 +13,13 @@ interface HeroProps {
 const Hero = ({ names }: HeroProps) => {
   return (
     <section
-      className="relative min-h-screen bg-cover bg-center bg-fixed flex flex-col justify-center items-center text-center px-4 overflow-hidden"
-      style={{ backgroundImage: `url(${heroImage})` }}
+      className="relative min-h-screen bg-cover bg-center bg-fixed flex flex-col justify-center items-center text-center overflow-hidden"
+      style={{ 
+        backgroundImage: `url(${heroImage})`,
+        // Thêm fallback background color và đảm bảo hiển thị trên iOS
+        backgroundColor: '#000',
+        backgroundAttachment: 'scroll' // Thay thế fixed cho iOS
+      }}
     >
       {/* Lớp phủ gradient hiện đại - làm tối hơn để chữ nổi bật */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-purple-900/30 to-rose-900/40"></div>
@@ -44,14 +49,14 @@ const Hero = ({ names }: HeroProps) => {
         ))}
       </div>
 
-      {/* Nội dung chính */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Nội dung chính - Sửa lỗi căn giữa trên mobile */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
         {/* Save The Date */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-8 sm:mb-12"
+          className="mb-8 sm:mb-12 w-full flex flex-col items-center"
         >
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-6">
             <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent to-rose-200"></div>
@@ -75,12 +80,12 @@ const Hero = ({ names }: HeroProps) => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-normal sm:tracking-tight mb-4 sm:mb-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-normal sm:tracking-tight mb-4 sm:mb-6 leading-tight text-center w-full"
             style={{ 
               fontFamily: "'Playfair Display', serif",
               textShadow: '2px 2px 12px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.3)',
               letterSpacing: '0.02em',
-              color: '#fef7ff' // Màu trắng hồng nhạt
+              color: '#fef7ff'
             }}
           >
             SAVE THE DATE
@@ -92,16 +97,16 @@ const Hero = ({ names }: HeroProps) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mb-8 sm:mb-12"
+          className="mb-8 sm:mb-12 w-full flex flex-col items-center"
         >
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 mb-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 mb-4 w-full">
             <motion.span
               whileHover={{ scale: 1.05 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide whitespace-nowrap"
+              className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide whitespace-nowrap text-center"
               style={{ 
                 fontFamily: "'Dancing Script', cursive",
                 textShadow: '2px 2px 8px rgba(0,0,0,0.7), 0 0 15px rgba(255,255,255,0.2)',
-                color: '#fce7f3' // Màu trắng hồng nhạt
+                color: '#fce7f3'
               }}
             >
               {names.groom}
@@ -117,18 +122,18 @@ const Hero = ({ names }: HeroProps) => {
                 duration: 2,
                 ease: "easeInOut"
               }}
-              className="text-rose-200 mx-1 sm:mx-2 my-2 sm:my-0"
+              className="text-rose-200 mx-1 sm:mx-2 my-2 sm:my-0 flex-shrink-0"
             >
               <Heart className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9" fill="currentColor" />
             </motion.div>
 
             <motion.span
               whileHover={{ scale: 1.05 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide whitespace-nowrap"
+              className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide whitespace-nowrap text-center"
               style={{ 
                 fontFamily: "'Dancing Script', cursive",
                 textShadow: '2px 2px 8px rgba(0,0,0,0.7), 0 0 15px rgba(255,255,255,0.2)',
-                color: '#fce7f3' // Màu trắng hồng nhạt
+                color: '#fce7f3'
               }}
             >
               {names.bride}
@@ -141,14 +146,14 @@ const Hero = ({ names }: HeroProps) => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mb-8 sm:mb-12"
+          className="mb-8 sm:mb-12 w-full flex justify-center"
         >
-          <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-6 sm:px-8 py-3 sm:py-4 border border-white/30 shadow-2xl">
+          <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl px-6 sm:px-8 py-3 sm:py-4 border border-white/30 shadow-2xl mx-auto">
             <motion.p
-              className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider sm:tracking-widest"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider sm:tracking-widest text-center"
               style={{ 
                 textShadow: '1px 1px 6px rgba(0,0,0,0.6), 0 0 10px rgba(255,255,255,0.3)',
-                color: '#fdf2f8' // Màu trắng hồng rất nhạt
+                color: '#fdf2f8'
               }}
             >
               27.12.2025
@@ -161,9 +166,9 @@ const Hero = ({ names }: HeroProps) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="mb-8 sm:mb-12 flex justify-center"
+          className="mb-8 sm:mb-12 w-full flex justify-center"
         >
-          <div className="w-full max-w-2xl">
+          <div className="w-full max-w-2xl flex justify-center">
             <WeddingCountdown />
           </div>
         </motion.div>
@@ -173,7 +178,7 @@ const Hero = ({ names }: HeroProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="flex justify-center items-center gap-4 sm:gap-6 mt-8"
+          className="flex justify-center items-center gap-4 sm:gap-6 mt-8 w-full"
         >
           <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent to-rose-200"></div>
           <motion.div
@@ -210,10 +215,17 @@ const Hero = ({ names }: HeroProps) => {
         </motion.div>
       </motion.div>
 
-      {/* Thêm Google Fonts */}
+      {/* CSS fixes cho iOS */}
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+          
+          /* Fix cho background image trên iOS */
+          @supports (-webkit-touch-callout: none) {
+            .bg-fixed {
+              background-attachment: scroll;
+            }
+          }
         `}
       </style>
     </section>
