@@ -29,7 +29,7 @@ const Events = () => {
       id: 2,
       title: "Lễ Tân Hôn",
       subtitle: "Nhà Trai",
-      time: "10:00",
+      time: "8:00",
       date: "13.12.2025",
       location: "Tư gia nhà trai",
       address: "Thôn Mỹ Phú Nam, Xã Mỹ Lợi, Huyện Phù Mỹ, Tỉnh Bình Định",
