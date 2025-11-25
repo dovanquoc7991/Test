@@ -16,7 +16,7 @@ const Events = () => {
       title: "Lễ Vu Quy",
       subtitle: "Nhà Gái",
       time: "08:00",
-      date: "10.12.2025",
+      date: "11.12.2025",
       location: "Tư gia nhà gái",
       address: "Dân Phố Trung Trinh, P.Sông Cầu, T. Đắk LắK",
       mapUrl: brideCeremonyMapUrl,
